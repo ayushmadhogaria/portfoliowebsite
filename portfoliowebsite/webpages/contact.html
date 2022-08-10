@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>Contact Me</title>
+	    <link rel="stylesheet" href="../style.css">
+	</head>
+	<body id="home">
+		<nav id="navbar">
+			<h2><a href="index.html"><span class="text-primary">Ayush</span> Madhogaria </a></h2>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="CV.html">CV</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="research.html">Research</a></li>
+				<li><a href="contact.html">Contact</a></li>
+		   
+			</ul>
+		</nav>
+
+		<section id="contact" >
+			<div class="container">
+				<h2>Incase You Want <span class="text-primary"> To Enquire Anything</span></h2>
+				<div class="form-container">
+					<div class="form-box">
+						<h3>Send me<span class="text-primary"> Your Feedbacks </span></h3>
+				
+
+		<form name="messageForm" onsubmit="validateForm()">
+			<p class="form-group" >Enter Your First Name <input type="text" name="firstname"></p>
+			<p class="form-group">Enter your Last Name <input type="text" name="lastname"></p>
+			<p>Did my CV impress you?<input type="radio" name="impression" value="Yes" checked> Yes
+			<input type="radio" name="impression" value="No"> No </p>
+			<p class="form-group">Message: <br><textarea name="message" rows="10" cols="30" placeholder="Enter Message"></textarea></p>
+			<p  class="form-group"><input type="submit" value="Send Message"></p>
+			 
+		</form>
+		
+	</div>
+</div>
+    
+	<script>
+	function validateForm() {
+		var fname = document.forms["messageForm"]["firstname"].value;
+		var lname = document.forms["messageForm"]["lastname"].value;
+		var impression = document.forms["messageForm"]["impression"].value;
+		var message = document.forms["messageForm"]["message"].value;
+	
+		if (fname == "" || lname == "" || message == ""){
+			alert("Empty fields found. Please fill the form.");
+		}
+		else {
+			alert("Thank you for the feedback.");
+		}
+	}  
+	</script> 
+	</section>
+	<footer class="bg-dark">
+	<p>Copyright &copy;Ayush Madhogaria Islington 2021</p>  
+    </footer>
+    <p id="date"></p><script src="../script.js"></script>
+	</body>
+</html>

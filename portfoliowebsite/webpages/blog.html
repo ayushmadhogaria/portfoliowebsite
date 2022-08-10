@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    
+    /* this is an internal CSS */
+    /* Add a gray background color with some padding */
+    
+body {
+    font-family: Arial;
+    background: #f1f1f1;
+    color : #333;
+    margin-top: auto 0px;
+}
+
+/* Header/Blog Title */
+.header {
+    padding: 0px;
+    font-size: 18px;
+    text-align: center;
+    background: white;
+    color: #363963;
+}
+
+.leftcolumn {
+    flex: 60%;
+}
+
+.rightcolumn {
+    flex: 25%;
+	padding-left: 40px;
+
+}
+
+/* Add a card effect for articles */
+.card {
+     background-color: white;
+     padding:40px;
+     margin-top: 10px;
+}
+.card1 {
+     background-color: white;
+     padding:40px;
+     margin-top: 10px;
+     flex: auto;
+}
+
+.row {
+    display: flex;
+}
+
+/* for the images present in the slider */
+  .slider {
+    width:450px;
+    height:400px;
+    margin:20px;
+}
+</style>
+</head>
+<body id="home">
+  <nav id="navbar">               
+      <h2><a href="index.html"><span class="text-primary">Ayush</span> Madhogaria </a></h2>
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="CV.html">CV</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="contact.html">Contact</a></li>
+  
+      </ul> 
+  </nav>
+  <section>
+<div class="header">
+  <h1>TECHNOLOGY : A HUGE REVOLUTION IN HUMAN LIFE</h1>
+</div>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2 style="text-align: center; font-size: large;">HOW HAS TECHNOLOGY AFFECTED OUR LIFE? </h2>
+      <h4 style="margin-top: 10px; margin-bottom: 10px;">INTRODUCTION AND ITS PROS</h4>
+      <p>Technology is defined as the practical application of good range of scientific 
+        knowledge, mainly in the field of inventions.Today, technology has optimistically 
+        affected the human life from solving complex issues to solving minor day-to-day
+         problems, and makes it easier for completing various tasks. Technology has 
+         simplified various tasks for us and has resulted to be very beneficial because 
+         it has opened many doors of opportunites for us that were unthinkable before. 
+         Technologies are invented to ease our lives, but it equally brings 
+         challenges in actual social interaction and our health. With the initialization of technology, 
+        several things have changed radically. It has reformed the way of social interaction such as:
+        travelling, learning, communication, business and even health. It has completelty created a 
+        drastic effect on human behaviour as well.</p>
+      <p>   <!-- inline CSS -->
+        Technology has successfully linked all the human from all around the globe and has contributed 
+        to create globalization and has brought a huge impact on social and economic aspects of the society.
+        Every human interaction can be carried out with the help of technology, resulting in time-management 
+        and minimizing the problems. But, technology has resulted as a boon for our society. First of all, 
+        the invention of mobile phones have made is so simple for us to connect to anyone , at anytime and
+        from anywhere. Similarly, businesses have been profitable and effective due to the use of technology. 
+        Similarly, technology has enabled us to access several materials globally, whether they are education-based 
+        or interest-based. Overall, technology have created a great impact in the field of agriculture, 
+        transportation, communication,medical and educational sectors.For an instant exapmle, we can take this 
+        COVID situation, where the world is on hold but with the availability of technology, the economic and 
+        educational sector still progresses through online work. So, this is the power of technology.</p>
+  </div>
+	<div class="card">
+      <h4>CONS OF TECHNOLOGY</h4>
+      <p >                           <!-- inline CSS -->
+        As these technological systems are designed by humans and have revolved so constantly that 
+        every youths today have built a deeply-rooted connection with technology and they are 
+        inseparable from technology. Today's youths seems to be vanished in the world of technology and 
+        seems to be unaware about the things happening in the real life. However, today's generation are spending
+        more of their time on screen rather than off-screen.It is good to know about technology and using it for
+        essential tasks, but when it is overused or misused it is little unacceptable. Hence, technology has caused
+        negative impact in the human life. The access to online social media platforms has minimized actual 
+        face-to-face social interaction which has resulted in lack of social skills in today's generation.
+        Lastly, technology creates unstable mindset causing depressing attitude and decreasing human creativity.
+        Overall, there are pros and cons in equal proportion.</p>
+    </div>
+  </div>
+  <section>
+    <div class="slider-container">
+      <img class="slider" src="../images/tech1.jpg"/>
+      <img class="slider" src="../images/tech2.jpg"/>
+      <img class="slider" src="../images/tech3.jpg"/>
+      <br/>
+      <button onclick="change(-1)">&lt;</button>
+      <button onclick="change(1)">&gt;</button>
+    </div>
+  </section>
+  
+   <!-- this is an internal JS for the image slider -->
+  <script>
+    var CurrentIndex = 0; //set curent index to 0
+    show(CurrentIndex); //show image having index equal to CurrentIndex
+    change_auto();
+
+    function change(n) {
+      CurrentIndex += n; //add or subtract 1 to CurrentIndex
+      show(CurrentIndex); //show image having index equal to CurrentIndex
+    }
+    
+    function change_auto() {
+      CurrentIndex ++;
+      show(CurrentIndex);
+      setTimeout(change_auto,1000);
+    }
+
+    function show(n) {
+      var x = document.getElementsByClassName("slider"); //gets all elements having class as "slider" and puts in an array
+      
+      if (n > x.length - 1) {
+         CurrentIndex = 0; //if n exceeds the indexes of the array then set CurrentIndex to 0
+      }    
+      if (n < 0) {
+        CurrentIndex = x.length - 1; //if n is negative then set CurrentIndex to the last index of the array
+      }
+      for (var i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  //set display none to all elements 
+      }
+      
+      x[CurrentIndex].style.display = "block";  //set display block to element with index equal to CurrentIndex
+    }
+  </script>
+ 
+</div>
+<div class="card">
+  <h4 >HOW HAS TECHNOLOGY AFFECTED ME?</h4>
+  <p style="margin-top: 10px;">      
+    In my context, technology has contributed to me mainly in educational sector. Availability
+    of technology has helped me to get exposure to various learning materials easily. 
+    Technology has been progressing rapidly ever since my life has started. It has affected 
+    me on how I live, work or learn. With each day passing by, the role that tecchnology plays
+    in my life has become vital. Computers, smartphones or various e-gadgets aare used
+    everyday. Teacher use projectors for teaching and notes are available easily, which has made
+    learning and teaching activities more fun. With time, I am sure that technology will be 
+    progressed more and benefit the whole globe. Lastly, technology has helped me save my
+    time and has served for my betterment. 
+   </p>
+</div>
+</div>
+</section> 
+<footer class="bg-dark">
+<p>Copyright &copy;Ayush Madhogaria Islington 2021</p>  
+</footer>
+<p id="date"></p><script src="../script.js"></script> 
+</body>
+</html>

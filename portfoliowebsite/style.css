@@ -1,0 +1,469 @@
+/*General styling */
+ 
+
+/*css for index homepage*/
+*{                                   /* for the presentable navigation bar */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {                                              /* for the body part of homepage */
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/*utility classes */
+.container {                       
+    max-width: 1100px;
+    margin: auto;
+}
+
+.text-primary {
+    color: #3693ff;
+}
+
+.bg-dark{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    
+}
+
+/* navbar */  
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    background: #333;
+    color: #fff;
+    padding: 24px 96px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border-bottom: 3px solid #3693ff;
+}
+#navbar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+#navbar h2 a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#navbar li a {
+    text-decoration: none;
+    color:#fff;
+    padding: 12px; 
+    font: size 13px;
+    margin: 0 6px;
+    border-radius: 5px;
+    transition: background-color 0.4s ;
+}
+
+#navbar li a:hover {
+    background-color: #3693ff;
+}
+/* Showcase area */
+
+#showcase {
+    background: url(images/image1.jpg) no-repeat center center/cover;
+    height: 85.5vh;
+}
+
+.showcase-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 81px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6);
+    color: #fff ;
+}
+.showcase-content h1 {
+    font-size: 48px;
+    margin-bottom: 24px;
+}
+.showcase-content .btn {
+    font-size: 18px;
+    padding: 12px 120px;
+    transition: color 0.3s , background 0.3s;
+}
+.showcase-content .btn:hover {                    /* creating the hover effect for the navbar */
+    background: #3693ff;
+    color: #fff;
+}
+.btn {
+    color: #a0b3f1;
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid #3963ff;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* About section */
+#about{
+    background-color: #ebedf5;
+}
+#about {
+    padding: 49px 0;
+}
+#about h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+#about h3{
+    font-size: 24px;
+    margin-bottom: 22px;
+}
+#about p.lead{
+    margin-bottom: 12px;
+}
+#about .about-content{
+   display: flex;
+}
+#about .about-text,
+#about .about-image {
+    flex: 1;
+}
+#about .about-text{
+    text-align: left;
+}
+
+
+#about .about-image img{
+    display: block;
+    margin-left: 150px;
+    width: 55%;
+    border-radius: 40%;
+    margin-top: 5px;
+    
+}
+
+/* CV section */
+#CV {
+    margin: 0px;
+    padding: 0px;
+    background-color: #ebedf5;
+    height:1400px;
+}
+
+#CV .resume-box {
+    width: 800px;
+    height: 1300px;
+    margin:0 auto;
+    background-color: white;
+}
+
+/* creating the boxes for the CV part */
+
+#CV .box-outer{
+    padding: 30px;
+}
+#CV .box-1{
+    background-color: #26252d;
+    width: 35%;
+    float: left;
+    height: 1300px;
+}
+#CV .box-2{
+    width: 60%;
+    float: left;
+    padding: 20px;
+}
+#CV .profile{
+    width: 100%;
+}
+#CV h1{
+    color: #ceced1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 12px;
+}
+#CV p{
+    color: #ceced1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    margin: 8px;
+}
+
+/* for creating the rating of skills part in CV part*/
+
+#progress{
+    background-color: #333;
+    border-radius: 18px;
+    height: 8px;
+    width: 90%;
+    padding: 0px;  
+}
+
+#progress::after{
+    content: ' ';
+    display: block;
+    background-color: #3963ff;
+    border-radius: 5px;
+    height: 10px;
+    width: 50%;
+}
+
+#progress{
+    background-color: #333;
+    border-radius: 18px;
+    height: 8px;
+    width: 90%;
+    padding: 0px;
+}
+
+#progress::after{
+    content: ' ';
+    display: block;
+    background-color: #3963ff;
+    border-radius: 5px;
+    height: 8px;
+    width: 50%;
+}
+
+#progress1{
+    background-color: #333;
+    border-radius: 18px;
+    height: 8px;
+    width: 90%;
+    padding: 0px;
+}
+
+#progress1::after{
+    content: ' ';
+    display: block;
+    background-color: #3963ff;
+    border-radius: 5px;
+    height: 8px;
+    width: 20%;
+}
+
+#progress2{
+    background-color: #333;
+    border-radius: 18px;
+    height: 8px;
+    width: 90%;
+    padding: 0px;
+}
+
+#progress2::after{
+    content: ' ';
+    display: block;
+    background-color: #3963ff;
+    border-radius: 5px;
+    height: 8px;
+    width: 60%;
+}
+
+#progress3{
+    background-color: #333;
+    border-radius: 18px;
+    height: 8px;
+    width: 90%;
+    padding: 0px;
+}
+
+#progress3::after{
+    content: ' ';
+    display: block;
+    background-color: #3963ff;
+    border-radius: 5px;
+    height: 8px;
+    width: 80%;
+}
+
+#progress4{
+    background-color: #333;
+    border-radius: 18px;
+    height: 8px;
+    width: 90%;
+    padding: 0px;
+}
+
+#progress4::after{
+    content: ' ';
+    display: block;
+    background-color: #3963ff;
+    border-radius: 5px;
+    height: 8px;
+    width: 98%;
+}
+
+#progress5{
+    background-color: #333;
+    border-radius: 18px;
+    height: 8px;
+    width: 90%;
+    padding: 0px;
+}
+
+#progress5::after{
+    content: ' ';
+    display: block;
+    background-color: #3963ff;
+    border-radius: 5px;
+    height: 8px;
+    width: 60%;
+}
+
+#progress6{
+    background-color: #333;
+    border-radius: 18px;
+    height: 8px;
+    width: 90%;
+    padding: 0px;
+}
+
+#progress6::after{
+    content: ' ';
+    display: block;
+    background-color: #3963ff;
+    border-radius: 5px;
+    height: 8px;
+    width: 20%;
+}
+
+/* CSS for the CV webpage */
+
+#CV .intro {text-align: center;}
+#CV .intro h1{
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+#CV .hr{
+    height: 1px;
+    border: none;
+    background-color: #3693ff;
+}
+
+#CV .intro-p{
+    color:#333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    text-align: left;
+}
+
+#CV .content-2{
+    padding-top: 40px;
+}
+
+#CV .head{
+    color: #26262d;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0px;
+    font-size: 20px;
+}
+
+#CV .para-1{
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #26252d;
+    font-weight: 400;
+    margin: 5px 0px;
+    margin-top: 10px;
+}
+
+#CV .para-2{
+    font-size: 12px;
+   
+    color: #333; 
+    font-weight: 400; 
+    margin: 5px 0px;
+    margin-bottom: 20px;
+    margin-top: 0px;  
+}
+
+
+#CV table
+{
+    border: 1px solid #333;
+    }
+#CV td
+{
+    padding: 0.5 px;
+    border: 1px solid #333;
+    }
+#CV table{
+    font-size: 12px;
+}
+
+#CV li{
+    font-size: 12px;
+}
+
+/* CSS for the time stamp JS */
+#date{
+    background-color:rgb(117, 116, 116);
+    color: white;
+    text-align: center;
+}
+
+/* CSS for the contact webpage */
+
+#contact h2{
+    text-align: center;
+    font-size: 36px;
+}
+
+#contact h3{
+    text-align: center;
+    font-size: 30px;
+    margin: 18px 0px;
+}
+
+#contact .form-box{
+    padding: 34px;
+    box-shadow: 2px 2px 5px #696969;
+    margin: 0 auto;
+}
+
+#contact .form-group{
+    margin-bottom: 24px;
+   
+}
+
+
+#contact .form-group textarea{
+    width: 60%;
+    margin-left: 10%;
+    font-size: 16px;
+    padding: 8px;
+    border: 0.5px solid #333;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+
+#contact .form-group input{
+    width: 44%;
+    margin-left: 10%;
+    font-size: 16px;
+    padding: 8px;
+    border: 0.5px solid #333;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+
